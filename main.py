@@ -3,9 +3,9 @@ from fastapi import *
 
 from fastapi import Depends, FastAPI
 
-from .dependencies import get_querry_token, get_token_header
-from .internal import admin
-from .routers import items, users
+from dependencies import get_querry_token, get_token_header
+from internal import admin
+from routers import items, users
 
 app= FastAPI(dependencies=[Depends(get_querry_token)])
 
